@@ -1,9 +1,9 @@
 import React from 'react'
 
-const index = () => {
+const DonateView = ({setOpenSendTransaction}) => {
   return (
-    <div>index</div>
+    <div>DonateView</div>
   )
 }
 
-export default index
+export default DonateView

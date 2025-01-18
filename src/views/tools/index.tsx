@@ -1,9 +1,13 @@
 import React from 'react'
 
-const index = () => {
+const ToolView = ({  setOpenAirdrop,
+  setOpenContact,
+  setOpenCreateModal,
+  setOpenSendTransaction,
+  setOpenTokenMetaData }) => {
   return (
-    <div>index</div>
+    <div>ToolView</div>
   )
 }
 
-export default index
+export default ToolView

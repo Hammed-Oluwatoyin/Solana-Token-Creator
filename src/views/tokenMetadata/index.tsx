@@ -1,6 +1,6 @@
 import React from 'react'
 
-const index = () => {
+const index = ({setOpenTokenMetaData}) => {
   return (
     <div>index</div>
   )

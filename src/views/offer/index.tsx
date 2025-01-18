@@ -1,9 +1,9 @@
 import React from 'react'
 
-const index = () => {
+const OfferView = () => {
   return (
-    <div>index</div>
+    <div>OfferView</div>
   )
 }
 
-export default index
+export default OfferView;

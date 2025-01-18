@@ -1,6 +1,10 @@
 import React from 'react'
 
-const index = () => {
+const index = ({setOpenAirdrop,
+  setOpenContact,
+  setOpenCreateModal,
+  setOpenSendTransaction,
+  setOpenTokenMetaData}) => {
   return (
     <div>index</div>
   )
