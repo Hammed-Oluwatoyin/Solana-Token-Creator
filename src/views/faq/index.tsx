@@ -1,4 +1,4 @@
-const question = [
+export const question = [
   {
     question: " Who are produces sit pleasure?",
     answer:
@@ -38,3 +38,12 @@ const question = [
 ];
 
 
+import React from 'react'
+
+const FaqView = () => {
+  return (
+    <div>FaqView</div>
+  )
+}
+
+export default FaqView;

@@ -1,9 +1,90 @@
-import React from 'react'
+import React, { useState } from "react";
+import type { NextPage } from "next";
+import Head from "next/head";
 
-const index = () => {
+import {
+  HomeView,
+  ToolView,
+  FeatureView,
+  OfferView,
+  FaqView,
+  CreateView,
+  TokenMetadata,
+  ContactView,
+  AirdropView,
+  DonateView,
+} from "../views";
+
+const Home: NextPage = (props) => {
+  //STATE VARIABLE
+  const [openCreateModal, setOpenCreateModal] = useState(false);
+  const [openTokenMetaData, setOpenTokenMetaData] = useState(false);
+  const [openContact, setOpenContact] = useState(false);
+  const [openAirdrop, setOpenAirdrop] = useState(false);
+  const [openSendTransaction, setOpenSendTransaction] = useState(false);
+
   return (
-    <div>index</div>
-  )
-}
+    <>
+      <Head>
+        <title>Solana Token Creator</title>
+        <meta
+          name="Solana token creator"
+          content="build and create solana token"
+        />
+      </Head>
+      <HomeView setOpenCreateModal={setOpenCreateModal} />
+      <ToolView
+        setOpenAirdrop={setOpenAirdrop}
+        setOpenContact={setOpenContact}
+        setOpenCreateModal={setOpenCreateModal}
+        setOpenSendTransaction={setOpenSendTransaction}
+        setOpenTokenMetaData={setOpenTokenMetaData}
+      />
+      <FeatureView
+        setOpenAirdrop={setOpenAirdrop}
+        setOpenContact={setOpenContact}
+        setOpenCreateModal={setOpenCreateModal}
+        setOpenSendTransaction={setOpenSendTransaction}
+        setOpenTokenMetaData={setOpenTokenMetaData}
+      />
+      <OfferView/>
+      <FaqView/>
 
-export default index
+      {
+        openCreateModal && (
+        <div className="new_loader relative h-full bg-slate-900">
+            <CreateView setOpenCreateModal={setOpenCreateModal}/>
+        </div>)
+      }
+ {
+        openTokenMetaData && (
+        <div className="new_loader relative h-full bg-slate-900">
+            <TokenMetadata setOpenTokenMetaData={setOpenTokenMetaData}/>
+        </div>)
+      }
+
+       {
+        openContact && (
+        <div className="new_loader relative h-full bg-slate">
+            <ContactView setOpenContact={setOpenContact}/>
+        </div>)
+      }
+      {
+        openAirdrop && (
+          <div className="new_loader relative h-full bg-slate">
+          <AirdropView setOpenAirdrop={setOpenAirdrop}/>
+      </div>
+        )
+      }
+          {
+        openSendTransaction && (
+          <div className="new_loader relative h-full bg-slate">
+          <DonateView setOpenSendTransaction={setOpenSendTransaction}/>
+      </div>
+        )
+      }
+    </>
+  );
+};
+
+export default Home;

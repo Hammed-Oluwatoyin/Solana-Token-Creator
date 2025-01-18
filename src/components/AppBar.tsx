@@ -26,10 +26,6 @@ const menu = [
 ];
 
 const AppBar: FC = (props) => {
- 
-
-  console.log(menu);
-
   return (
     <div>
       <header id="navbar-sticky" className="navbar">

@@ -1,0 +1,11 @@
+export { default as HomeView } from "./home";
+export {default as ToolView} from "./tools";
+export {default as FeatureView} from "./feature";
+export {default as OfferView} from "./offer";
+export {default as FaqView} from "./faq";
+export {default as AirdropView} from "./airdrop";
+export {default as DonateView} from "./donate";
+export {default as CreateView} from "./create";
+export {default as InputView} from "./input";
+export {default as TokenMetadata} from "./tokenMetadata";
+export {default as ContactView} from "./contact" ;

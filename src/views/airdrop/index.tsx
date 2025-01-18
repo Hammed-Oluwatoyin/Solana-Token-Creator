@@ -1,9 +1,9 @@
 import React from 'react'
 
-const index = () => {
+const AirdropView = ({setOpenAirdrop}) => {
   return (
-    <div>index</div>
+    <div>AirdropView</div>
   )
 }
 
-export default index
+export default AirdropView

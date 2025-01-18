@@ -1,9 +1,9 @@
 import React from 'react'
 
-const index = () => {
+const InputView = () => {
   return (
-    <div>index</div>
+    <div>Input View</div>
   )
 }
 
-export default index
+export default InputView
