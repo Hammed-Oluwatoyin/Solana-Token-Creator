@@ -42,7 +42,7 @@ const ToolView = ({  setOpenAirdrop,
       function: setOpenSendTransaction,
     },
     {
-      name:"Top Tokens ",
+      name:"Top Tokens",
       icon: <MdGeneratingTokens/>,
       function: setOpenSendTransaction,
     },
@@ -99,10 +99,11 @@ const ToolView = ({  setOpenAirdrop,
             <div className="mt-10 flex justify-center">
               <a className={"hover:bg-primary-hover bg-primary inline-flex items-center justify-center gap-2 rounded-full px-6 py-2 text-white transition-all duration-500"}>
                 More Tools
+                <i>
+                  <IoIosArrowRoundForward/>
+                </i>
               </a>
-              <i>
-                <IoIosArrowRoundForward/>
-              </i>
+
             </div>
           </div>
     </section>
